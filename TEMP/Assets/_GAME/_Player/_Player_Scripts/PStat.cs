@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PStat : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int health;
+    [SerializeField] private BoxCollider2D _heatBox;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        Debug.Log("heat!");
+        if (collision.gameObject.CompareTag("enemyCharacter"))
+        {
+            Debug.Log("enemy heat");
+            health -= 10;
+        }
+
     }
+    private void Update()
+    {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(0);
+        }
+        
+       }
+
 }
