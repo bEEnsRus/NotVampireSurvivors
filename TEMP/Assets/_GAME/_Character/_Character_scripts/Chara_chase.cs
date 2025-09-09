@@ -14,7 +14,7 @@ public class Chara_chase : MonoBehaviour
         if (_playerChr == null)
             _playerChr = GameObject.FindWithTag("playerCharacter");
     }
-    public void Update()
+    public void FixedUpdate()
     {
         _enemyDir = (_playerChr.transform.position - transform.position).normalized;
         _enemyRb.velocity = _enemySpeed * Time.fixedDeltaTime * _enemyDir;

@@ -173,5 +173,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPos: {x: 0, y: 0}
   _enemyRb: {fileID: 6261573890010047834}
-  _enemySpeed: 10
+  _enemySpeed: 30
   _playerChr: {fileID: 0}
