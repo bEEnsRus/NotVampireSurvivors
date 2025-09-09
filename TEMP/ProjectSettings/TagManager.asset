@@ -6,6 +6,8 @@ TagManager:
   tags:
   - playerCharacter
   - enemyCharacter
+  - playerAttack
+  - enemyAttack
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Effect
   - 
   - 
   - 
@@ -48,4 +50,7 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 3305513921
+    locked: 0
+  - name: Effect
+    uniqueID: 2454134747
     locked: 0

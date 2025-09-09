@@ -10,10 +10,10 @@ public class PStat : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("heat!");
-        if (collision.gameObject.CompareTag("enemyCharacter"))
+        Debug.Log("hit!");
+        if (collision.gameObject.CompareTag("enemyCharacter") && !collision.gameObject.CompareTag("playerAttack"))
         {
-            Debug.Log("enemy heat");
+            Debug.Log("enemy hit");
             health -= 10;
         }
 
