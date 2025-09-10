@@ -8,14 +8,14 @@ public class EnemyCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("hit!");
         if (collision.gameObject.CompareTag("PlayerAttack"))
         {
             health -= 10;
             if (health <= 0)
             {
+                GameStats.enemyCount -= 1;
+                Debug.Log(GameStats.enemyCount);
                 Destroy(gameObject);
-                GameStats.enemyCount--;
             }
         }
         else if (collision.gameObject.CompareTag("Player"))

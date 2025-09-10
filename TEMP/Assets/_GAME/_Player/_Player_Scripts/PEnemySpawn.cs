@@ -25,14 +25,18 @@ public class PEnemySpawn : MonoBehaviour
     }
     IEnumerator Enemyspawn()
     {
-        while (GameStats.enemyCount < 12)
+        while (true)
         {
-            for(int i = 0; i <= Random.Range(1,4); i++)
+            while (GameStats.enemyCount < 12)
             {
-                Instantiate(_enemy, _player.transform.position + new Vector3(RandomFloat(), RandomFloat(), 0), _player.transform.rotation);
-                GameStats.enemyCount++;
+                for (int i = 0; i <= Random.Range(1, 4); i++)
+                {
+                    Instantiate(_enemy, _player.transform.position + new Vector3(RandomFloat(), RandomFloat(), 0), _player.transform.rotation);
+                    GameStats.enemyCount++;
+                    Debug.Log(GameStats.enemyCount);
+                }
+                yield return new WaitForSeconds(3f);
             }
-            yield return new WaitForSeconds(3f);
         }
     }
 }
