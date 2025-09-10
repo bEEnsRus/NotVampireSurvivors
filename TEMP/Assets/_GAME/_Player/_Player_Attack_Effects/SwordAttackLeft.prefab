@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7046450662074137186}
   - component: {fileID: 2348088124715134046}
   m_Layer: 7
-  m_Name: SwordAttack
+  m_Name: SwordAttackLeft
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5387513787373754693}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.71852636, y: -0.07714696, z: -0.61891496}
+  m_LocalPosition: {x: -0.71852636, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []

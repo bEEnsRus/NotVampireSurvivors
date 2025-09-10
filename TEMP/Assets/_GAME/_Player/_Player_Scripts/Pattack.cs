@@ -3,27 +3,35 @@ using UnityEngine;
 public class Pattack : MonoBehaviour
 {
     #region Data
-    [SerializeField] private GameObject _swordAttack;
+    [SerializeField] private GameObject _swordAttackL;
+    [SerializeField] private GameObject _swordAttackR;
     [SerializeField] private GameObject _player;
-    private float deltaTime; //time passed since last click
-    private Vector2 _clickPos; //where last click happened
     #endregion
     // Start is called before the first frame update
     public void OnMouseDown()
     {
-        //Debug.Log(GetMousePos());
-        Instantiate(_swordAttack, _player.transform);
-        Debug.Log("clicked");
+        Vector2 _pScreenPos = Camera.main.WorldToScreenPoint(_player.transform.position);
+        if (CursorXPos(_pScreenPos, Input.mousePosition) == -1)
+        {
+            Instantiate(_swordAttackR, _player.transform);
+            Debug.Log("right side attack");
+        }
+        else
+        {
+            Instantiate(_swordAttackL, _player.transform);
+            Debug.Log("left side attack");
+        }
     }
 
-    private Vector2 GetMousePos()
+    public int CursorXPos(Vector2 _playerPos, Vector2 _pScreenPos)
     {
-        deltaTime += Time.deltaTime;
-        if (deltaTime > 0)
+        if(_playerPos.x - _pScreenPos.x < 0)
         {
-            Event _event = Event.current;
-            _clickPos = _event.mousePosition;
+            return -1;
         }
-        return _clickPos;
+        else
+        {
+            return 1;
+        }
     }
 }

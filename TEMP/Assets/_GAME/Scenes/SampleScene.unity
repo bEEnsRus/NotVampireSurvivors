@@ -4271,7 +4271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51cdd738a301574b82d924cdce32bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _swordAttack: {fileID: 5387513787373754693, guid: 0a5d8e9c4230ead40a059f72d7b3a849, type: 3}
+  _swordAttackL: {fileID: 5387513787373754693, guid: 0a5d8e9c4230ead40a059f72d7b3a849, type: 3}
+  _swordAttackR: {fileID: 5387513787373754693, guid: fd2e0fcb78f50774abfa326185082935, type: 3}
   _player: {fileID: 1245023784}
 --- !u!1 &851314635
 GameObject:
