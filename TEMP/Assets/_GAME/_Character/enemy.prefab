@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7647065092567702964}
   m_Layer: 0
   m_Name: enemy
-  m_TagString: enemyCharacter
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,8 +175,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPos: {x: 0, y: 0}
   _enemyRb: {fileID: 6261573890010047834}
+  _player: {fileID: 0}
   _enemySpeed: 0.01
-  _playerChr: {fileID: 0}
 --- !u!114 &-8542736739700380944
 MonoBehaviour:
   m_ObjectHideFlags: 0

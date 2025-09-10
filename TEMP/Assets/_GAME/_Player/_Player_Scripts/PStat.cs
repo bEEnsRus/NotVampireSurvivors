@@ -1,30 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class PStat : MonoBehaviour
+static class GameStats
 {
-    public int health;
-    [SerializeField] private BoxCollider2D _hitBox;
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("hit!");
-        if (collision.gameObject.CompareTag("enemyCharacter"))
-        {
-            Debug.Log("enemy hit");
-            health -= 10;
-        }
-
-    }
-    private void Update()
-    {
-        if (health <= 0)
-        {
-            SceneManager.LoadScene(0);
-        }
-        
-       }
-
+    public static int playerHp = 100;
+    public static int enemyCount = 0;
 }

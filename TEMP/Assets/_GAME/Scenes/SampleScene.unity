@@ -4470,11 +4470,10 @@ GameObject:
   - component: {fileID: 1245023788}
   - component: {fileID: 1245023791}
   - component: {fileID: 1245023792}
-  - component: {fileID: 1245023793}
   - component: {fileID: 1245023794}
   m_Layer: 6
   m_Name: Player
-  m_TagString: playerCharacter
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4624,7 +4623,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 64
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.013578653, y: 0}
@@ -4654,20 +4653,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemy: {fileID: 7128800653475689994, guid: 0b395456a4a0bc948b5d0a650bc83c31, type: 3}
   _player: {fileID: 1245023784}
---- !u!114 &1245023793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245023784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa708a37bb02d446864b06461656e47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  _hitBox: {fileID: 0}
 --- !u!61 &1245023794
 BoxCollider2D:
   m_ObjectHideFlags: 0
