@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class PStat : MonoBehaviour
 {
     public int health;
-    [SerializeField] private BoxCollider2D _heatBox;
+    [SerializeField] private BoxCollider2D _hitBox;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("hit!");
-        if (collision.gameObject.CompareTag("enemyCharacter") && !collision.gameObject.CompareTag("playerAttack"))
+        if (collision.gameObject.CompareTag("enemyCharacter"))
         {
             Debug.Log("enemy hit");
             health -= 10;

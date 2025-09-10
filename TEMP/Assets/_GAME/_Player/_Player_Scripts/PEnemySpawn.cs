@@ -4,28 +4,37 @@ using UnityEngine;
 
 public class PEnemySpawn : MonoBehaviour
 {
-    public GameObject enemy;
-    [SerializeField] private GameObject _player;   
+    public GameObject _enemy;
+    [SerializeField] private GameObject _player;
+    private int enemyCount;
     void Start()
     {
         StartCoroutine(Enemyspawn());
     }
-
-    void Update()
+    public float RandomFloat()
     {
-        
+        float roll = Random.Range(1, 3);
+        switch (roll)
+        {
+            case 1:
+                return Random.Range(4, 7);
+            case 2:
+                return Random.Range(-4, -7);
+            default:
+                break;
+        }
+        return 1;
     }
     IEnumerator Enemyspawn()
     {
-        int enemycount = 0;
-        while (enemycount < 12)
+        while (enemyCount < 12)
         {
-            Instantiate(enemy, _player.transform.position + new Vector3(Random.Range(-4, -7), Random.Range(4, 7), 0), _player.transform.rotation);
-            Instantiate(enemy, _player.transform.position + new Vector3(Random.Range(4, 7), Random.Range(4, 7), 0), _player.transform.rotation);
-            Instantiate(enemy, _player.transform.position + new Vector3(Random.Range(-4, -7), Random.Range(-4, -7), 0), _player.transform.rotation);
-            Instantiate(enemy, _player.transform.position + new Vector3(Random.Range(4, 7), Random.Range(-4, -7), 0), _player.transform.rotation);
-            enemycount += 4;
-            yield return null;
+            for(int i = 0; i <= Random.Range(1,4); i++)
+            {
+                Instantiate(_enemy, _player.transform.position + new Vector3(RandomFloat(), RandomFloat(), 0), _player.transform.rotation);
+                enemyCount++;
+            }
+            yield return new WaitForSeconds(3f);
         }
     }
 }
