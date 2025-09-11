@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class Pattack : MonoBehaviour
+public class PAttack : MonoBehaviour
 {
     #region Data
     [SerializeField] private GameObject _swordAttackL;
     [SerializeField] private GameObject _swordAttackR;
     [SerializeField] private GameObject _player;
+    public int swordDmg;
     #endregion
     // Start is called before the first frame update
     public void OnMouseDown()

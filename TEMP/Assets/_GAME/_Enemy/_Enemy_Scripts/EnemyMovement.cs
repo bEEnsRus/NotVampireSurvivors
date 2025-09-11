@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Chara_chase : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private Vector2 _enemyPos;
     [SerializeField] private Rigidbody2D _enemyRb;
