@@ -162,6 +162,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 229655494}
+  - component: {fileID: 229655496}
+  - component: {fileID: 229655495}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -185,48 +187,13 @@ Transform:
   - {fileID: 854420079}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &245773485
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 245773486}
-  - component: {fileID: 245773490}
-  - component: {fileID: 245773489}
-  - component: {fileID: 245773488}
-  - component: {fileID: 245773487}
-  m_Layer: 0
-  m_Name: TilemapTopLeft
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &245773486
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245773485}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 854420079}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &245773487
+--- !u!61 &229655495
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245773485}
+  m_GameObject: {fileID: 229655493}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -252,7 +219,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -8, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -263,15 +230,15 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 22, y: 16}
+  m_Size: {x: 44, y: 32}
   m_EdgeRadius: 0
---- !u!114 &245773488
+--- !u!114 &229655496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245773485}
+  m_GameObject: {fileID: 229655493}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f51cdd738a301574b82d924cdce32bc3, type: 3}
@@ -280,6 +247,39 @@ MonoBehaviour:
   _swordAttackL: {fileID: 5387513787373754693, guid: 0a5d8e9c4230ead40a059f72d7b3a849, type: 3}
   _swordAttackR: {fileID: 5387513787373754693, guid: fd2e0fcb78f50774abfa326185082935, type: 3}
   _player: {fileID: 1245023784}
+--- !u!1 &245773485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 245773486}
+  - component: {fileID: 245773490}
+  - component: {fileID: 245773489}
+  m_Layer: 0
+  m_Name: TilemapTopLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &245773486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245773485}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 854420079}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &245773489
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -4287,8 +4287,6 @@ GameObject:
   - component: {fileID: 672608166}
   - component: {fileID: 672608168}
   - component: {fileID: 672608167}
-  - component: {fileID: 672608170}
-  - component: {fileID: 672608169}
   m_Layer: 0
   m_Name: TilemapBottomLeft
   m_TagString: Untagged
@@ -7956,66 +7954,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!61 &672608169
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672608165}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -8, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 22, y: 16}
-  m_EdgeRadius: 0
---- !u!114 &672608170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672608165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f51cdd738a301574b82d924cdce32bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _swordAttackL: {fileID: 5387513787373754693, guid: 0a5d8e9c4230ead40a059f72d7b3a849, type: 3}
-  _swordAttackR: {fileID: 5387513787373754693, guid: fd2e0fcb78f50774abfa326185082935, type: 3}
-  _player: {fileID: 1245023784}
 --- !u!1 &851314635
 GameObject:
   m_ObjectHideFlags: 0
@@ -8062,6 +8000,7 @@ GameObject:
   - component: {fileID: 854420078}
   - component: {fileID: 854420081}
   - component: {fileID: 854420080}
+  - component: {fileID: 854420082}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -8159,6 +8098,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1245023784}
   _map: {fileID: 229655493}
+--- !u!114 &854420082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854420077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f51cdd738a301574b82d924cdce32bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _swordAttackL: {fileID: 5387513787373754693, guid: 0a5d8e9c4230ead40a059f72d7b3a849, type: 3}
+  _swordAttackR: {fileID: 5387513787373754693, guid: fd2e0fcb78f50774abfa326185082935, type: 3}
+  _player: {fileID: 1245023784}
 --- !u!1 &866576738
 GameObject:
   m_ObjectHideFlags: 0
@@ -8578,8 +8532,6 @@ GameObject:
   - component: {fileID: 1735199267}
   - component: {fileID: 1735199271}
   - component: {fileID: 1735199270}
-  - component: {fileID: 1735199269}
-  - component: {fileID: 1735199268}
   m_Layer: 0
   m_Name: TilemapBottomRight
   m_TagString: Untagged
@@ -8602,66 +8554,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854420079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1735199268
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735199266}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -8, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 22, y: 16}
-  m_EdgeRadius: 0
---- !u!114 &1735199269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735199266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f51cdd738a301574b82d924cdce32bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _swordAttackL: {fileID: 5387513787373754693, guid: 0a5d8e9c4230ead40a059f72d7b3a849, type: 3}
-  _swordAttackR: {fileID: 5387513787373754693, guid: fd2e0fcb78f50774abfa326185082935, type: 3}
-  _player: {fileID: 1245023784}
 --- !u!483693784 &1735199270
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -12437,8 +12329,6 @@ GameObject:
   - component: {fileID: 2114256074}
   - component: {fileID: 2114256078}
   - component: {fileID: 2114256077}
-  - component: {fileID: 2114256076}
-  - component: {fileID: 2114256075}
   m_Layer: 0
   m_Name: TilemapTopRight
   m_TagString: Untagged
@@ -12461,66 +12351,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854420079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2114256075
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114256073}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -8, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 22, y: 16}
-  m_EdgeRadius: 0
---- !u!114 &2114256076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114256073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f51cdd738a301574b82d924cdce32bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _swordAttackL: {fileID: 5387513787373754693, guid: 0a5d8e9c4230ead40a059f72d7b3a849, type: 3}
-  _swordAttackR: {fileID: 5387513787373754693, guid: fd2e0fcb78f50774abfa326185082935, type: 3}
-  _player: {fileID: 1245023784}
 --- !u!483693784 &2114256077
 TilemapRenderer:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PAttack : MonoBehaviour
+public class PAttackGrid : MonoBehaviour
 {
     #region Data
     [SerializeField] private GameObject _swordAttackL;
@@ -10,7 +10,7 @@ public class PAttack : MonoBehaviour
     public void OnMouseDown()
     {
         Vector2 _pScreenPos = Camera.main.WorldToScreenPoint(_player.transform.position);
-        if (CursorXPos(_pScreenPos, Input.mousePosition) == -1)
+        if (CursorXPos(_pScreenPos, Input.mousePosition) == 1)
         {
             Instantiate(_swordAttackR, _player.transform);
             Debug.Log("right side attack");
@@ -24,7 +24,7 @@ public class PAttack : MonoBehaviour
 
     public int CursorXPos(Vector2 _playerPos, Vector2 _pScreenPos)
     {
-        if(_playerPos.x - _pScreenPos.x < 0)
+        if (_playerPos.x - _pScreenPos.x < 0)
         {
             return -1;
         }

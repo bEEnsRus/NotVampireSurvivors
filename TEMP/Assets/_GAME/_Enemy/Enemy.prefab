@@ -189,9 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 321a68ad11333d84ca22c0ec3237a9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAtk: 10
+  enemyAtk: 1
   enemyHp: 10
-  playerStats: {fileID: 0}
 --- !u!61 &7647065092567702964
 BoxCollider2D:
   m_ObjectHideFlags: 0
