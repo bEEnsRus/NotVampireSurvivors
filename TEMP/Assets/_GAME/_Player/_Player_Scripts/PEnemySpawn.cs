@@ -37,6 +37,7 @@ public class PEnemySpawn : MonoBehaviour
                 }
                 yield return new WaitForSeconds(3f);
             }
+            yield return null;
         }
     }
 }
