@@ -5,14 +5,13 @@ using UnityEngine.SceneManagement;
 public class EnemyCollider : MonoBehaviour
 {
     [SerializeField] private int enemyAtk;
-    private int enemyHp;
-    [SerializeField] private PAttack playerStats;
+    [SerializeField] private int enemyHp;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PlayerAttack"))
         {
-            enemyHp -= playerStats.swordDmg;
+            enemyHp -= GameStats.playerAttack;
             if (enemyHp <= 0)
             {
                 GameStats.enemyCount -= 1;

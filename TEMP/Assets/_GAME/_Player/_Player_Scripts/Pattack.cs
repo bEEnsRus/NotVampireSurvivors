@@ -6,7 +6,6 @@ public class PAttack : MonoBehaviour
     [SerializeField] private GameObject _swordAttackL;
     [SerializeField] private GameObject _swordAttackR;
     [SerializeField] private GameObject _player;
-    public int swordDmg;
     #endregion
     // Start is called before the first frame update
     public void OnMouseDown()
