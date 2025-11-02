@@ -18,6 +18,6 @@ public class PMovement : MonoBehaviour
     
     void FixedUpdate()
     {
-        _playerRb.velocity = _playerSpeed * Time.fixedDeltaTime * _playerDir.normalized;
+        _playerRb.linearVelocity = _playerSpeed * Time.fixedDeltaTime * _playerDir.normalized;
     }
 }
