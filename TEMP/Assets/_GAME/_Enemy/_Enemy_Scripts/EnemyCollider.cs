@@ -19,7 +19,7 @@ public class EnemyCollider : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        else if (collision.gameObject.CompareTag("Player"))
+        else if (collision.gameObject.CompareTag("PlayerCollider"))
         {
             GameStats.playerHp -= enemyAtk;
             Debug.Log(GameStats.playerHp);

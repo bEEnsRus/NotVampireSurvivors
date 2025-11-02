@@ -4,7 +4,7 @@ public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private Vector2 _enemyPos;
     [SerializeField] private Rigidbody2D _enemyRb;
-    [SerializeField] private GameObject _player;
+    [SerializeField] static GameObject _player;
     [SerializeField] private float _enemySpeed;
     private void Start()
     {

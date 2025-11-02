@@ -107,21 +107,21 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 768
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!61 &2148311109159913900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -182,7 +182,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPos: {x: 0, y: 0}
   _enemyRb: {fileID: 6261573890010047834}
-  _player: {fileID: 0}
   _enemySpeed: 1.5
 --- !u!114 &-8542736739700380944
 MonoBehaviour:
@@ -196,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 321a68ad11333d84ca22c0ec3237a9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAtk: 10
+  enemyAtk: 0
   enemyHp: 10
 --- !u!1 &7401930102032114390
 GameObject:
@@ -208,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885834021928497529}
   - component: {fileID: 1979514502341445204}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: EnemyCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +242,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 320
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
