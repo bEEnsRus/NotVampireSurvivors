@@ -11,8 +11,8 @@ public class EnemyMovement : MonoBehaviour
         if (_player == null)
             _player = GameObject.FindWithTag("Player");
     }
-    public void Update()
+    public void FixedUpdate()
     {
-        gameObject.transform.position = Vector2.MoveTowards(gameObject.transform.position, _player.transform.position, _enemySpeed);
+        gameObject.transform.position = Vector2.MoveTowards(gameObject.transform.position, _player.transform.position, _enemySpeed*Time.fixedDeltaTime);
     }
 }
