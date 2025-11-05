@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 321a68ad11333d84ca22c0ec3237a9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAtk: 0
+  enemyAtk: 10
   enemyHp: 10
 --- !u!1 &7401930102032114390
 GameObject:

@@ -1,7 +1,14 @@
+using UnityEngine;
 
-static class GameStats
+public class GameStats : MonoBehaviour
 {
-    public static int playerHp = 100;
-    public static int enemyCount = 0;
-    public static int playerAttack = 10;
+    public static int playerHp;
+    public static int enemyCount;
+    public static int playerAttack;
+    void OnEnable()
+    {
+        playerHp = 100;
+        enemyCount = 0;
+        playerAttack = 10;
+    }
 }

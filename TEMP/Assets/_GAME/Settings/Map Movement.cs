@@ -16,6 +16,7 @@ public class MapMovement : MonoBehaviour
         Debug.Log("collision out");
         if (!collision.gameObject.CompareTag("Player"))
             return;
+        Debug.Log("player collision out");
         int xPos = ComparePosition(_mapWorldPos.x, _player.transform.position.x, 5.5f);
         int yPos = ComparePosition(_mapWorldPos.y, _player.transform.position.y, 4f);
         Debug.LogError(new Vector2(xPos, yPos));

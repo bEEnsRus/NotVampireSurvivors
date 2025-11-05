@@ -33,7 +33,7 @@ public class PEnemySpawn : MonoBehaviour
                 {
                     Instantiate(_enemy, _player.transform.position + new Vector3(RandomFloat(), RandomFloat(), 0), _player.transform.rotation);
                     GameStats.enemyCount++;
-                    Debug.Log(GameStats.enemyCount);
+                    //Debug.Log(GameStats.enemyCount);
                 }
                 yield return new WaitForSeconds(3f);
             }
