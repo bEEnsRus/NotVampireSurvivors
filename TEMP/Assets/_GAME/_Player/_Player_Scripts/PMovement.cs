@@ -12,6 +12,7 @@ public class PMovement : MonoBehaviour
     [SerializeField] private Vector2 _playerPos;
     [SerializeField] private Rigidbody2D _playerRb;
     [SerializeField] private TextMeshProUGUI HpTMP;
+    [SerializeField] private SpriteRenderer _playerSprite;
     private Vector2 _playerDir;
     #endregion
     public void OnKeyPressed(InputAction.CallbackContext context)
@@ -35,6 +36,10 @@ public class PMovement : MonoBehaviour
     
     void FixedUpdate()
     {
+        if (_playerDir.x > 0)
+            _playerSprite.flipX = true;
+        else
+            _playerSprite.flipX = false;
         _playerRb.linearVelocity = _playerSpeed * Time.fixedDeltaTime * _playerDir.normalized;
     }
 }
