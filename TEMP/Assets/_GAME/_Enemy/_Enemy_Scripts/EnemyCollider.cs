@@ -1,7 +1,4 @@
-
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -16,7 +13,7 @@ public class EnemyStats : MonoBehaviour
             if (enemyHp > 0)
                 return;
             GameStats.enemyCount -= 1;
-            //Debug.Log(GameStats.enemyCount);
+            GameStats.EnemyDeath(Random.Range(1, 2), gameObject.transform.position);
             Destroy(gameObject);
         }
     }
