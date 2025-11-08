@@ -8,7 +8,14 @@ public class ExpCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameStats.playerExp++;
+            GameStats.playerExp += Mathf.RoundToInt(Random.Range(1,3));
+            if (GameStats.playerExp >= GameStats.neededExp)
+            {
+                GameStats.playerExp -= GameStats.neededExp;
+                GameStats.neededExp = GameStats.playerLevel * 200;
+                GameStats.playerLevel++;
+                Debug.Log($"Level {GameStats.playerLevel}! You need {GameStats.neededExp} more Experience to level up.");
+            }
             Destroy(this.gameObject);
         }
         if (!collision.gameObject.CompareTag("PlayerCollector"))
